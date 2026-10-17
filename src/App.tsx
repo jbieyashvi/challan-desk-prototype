@@ -13,7 +13,6 @@ import { VehicleDetail } from './pages/VehicleDetail'
 import { Challans } from './pages/Challans'
 import { ChallanDetail } from './pages/ChallanDetail'
 import { ChallanPayment } from './pages/ChallanPayment'
-import { DesignSystem } from './pages/DesignSystem'
 import type { SimSettings } from './domain/types'
 
 const Icon = {
@@ -98,12 +97,6 @@ export function App() {
         </nav>
 
         <div className="sidebar__foot">
-          <nav className="nav nav--quiet" aria-label="Prototype">
-            <NavLink to="/design-system">
-              <NavIcon d="ds" />
-              Design system
-            </NavLink>
-          </nav>
           <button type="button" className="nav-btn" onClick={() => setControls(true)}>
             <NavIcon d="controls" />
             Prototype controls
@@ -121,7 +114,6 @@ export function App() {
             <Route path="/challans" element={<Challans />} />
             <Route path="/challans/:id" element={<ChallanDetail />} />
             <Route path="/challans/:id/payment" element={<ChallanPayment />} />
-            <Route path="/design-system" element={<DesignSystem />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
