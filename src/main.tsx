@@ -9,7 +9,7 @@ import './styles/components.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
       <StoreProvider>
         <ToastProvider>
           <App />
